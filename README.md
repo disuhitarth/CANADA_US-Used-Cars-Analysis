@@ -36,7 +36,7 @@ scan the QE
 ![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau.PNG) 
 
 or click the link 
-[Kaggle original data source link](https://public.tableau.com/views/USEDCARS-CA-USA/Dashboard3?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+[Tableau Dashboard link](https://public.tableau.com/views/USEDCARS-CA-USA/Dashboard3?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 ​
 
 ## Contributing
