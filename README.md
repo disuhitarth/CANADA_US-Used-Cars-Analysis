@@ -27,6 +27,11 @@ Individual listing records show year, make, model, and trim, with VIN-level hist
 
 The dataset has the aggregate data from various used car dealers across Canada and United States
 
+## DASHBOARD​
+![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) 
+
+[Kaggle original data source link] (https://www.kaggle.com/rupeshraundal/marketcheck-automotive-data-us-canada)
+​
 
 ## Contributing
 This project is created by Hitarth and Saharsh.
