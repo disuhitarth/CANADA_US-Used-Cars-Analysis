@@ -1,3 +1,4 @@
+![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG)
 # US/CANADA USED CARS Analysis
 
 Due to pandemics, public transportation has become risky so we want to look at the current used car market in CANADA & USA. ​
