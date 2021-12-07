@@ -32,7 +32,8 @@ Individual listing records show year, make, model, and trim, with VIN-level hist
 The dataset has the aggregate data from various used car dealers across Canada and United States
 
 ## Tableau DASHBOARD​
-scan the QE
+scan the QR
+
 ![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau.PNG) 
 
 or click the link 
