@@ -14,9 +14,11 @@ Download this repo and run Create table and charts SQL script to analyze the dat
 
 
 ## DATASET​ SOURCE
+Scan the QR
 ![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) 
 
-[Kaggle original data source link] (https://www.kaggle.com/rupeshraundal/marketcheck-automotive-data-us-canada)
+or click the link
+[Kaggle original data source link](https://www.kaggle.com/rupeshraundal/marketcheck-automotive-data-us-canada)
 ​
 
 Data Source Owner- Rupesh Raundal​
@@ -27,10 +29,12 @@ Individual listing records show year, make, model, and trim, with VIN-level hist
 
 The dataset has the aggregate data from various used car dealers across Canada and United States
 
-## DASHBOARD​
-![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) 
+## Tableau DASHBOARD​
+scan the QE
+![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau.PNG) 
 
-[Kaggle original data source link] (https://www.kaggle.com/rupeshraundal/marketcheck-automotive-data-us-canada)
+or click the link 
+[Kaggle original data source link](https://public.tableau.com/views/USEDCARS-CA-USA/Dashboard3?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 ​
 
 ## Contributing
