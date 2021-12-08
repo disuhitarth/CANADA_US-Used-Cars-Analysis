@@ -1,19 +1,19 @@
 -- DAB 203 PROJECT
 
 
---Sheet 2
+--Sheet 2  Canada Average price vs Car Body type
 SELECT Avg([carsca_clean].[price]) AS [avg_price],
        [carsca_clean].[body_type]  AS [body_type]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[body_type]
 
---Sheet 1
+--Sheet 1  USA Average price vs Car Body type
 SELECT Avg([carus_clean].[price]) AS [avg_price],
        [carus_clean].[body_type]  AS [body_type]
 FROM   [dbo].[carus_clean] [carus_clean]
 GROUP  BY [carus_clean].[body_type]
 
---brands usa
+--brands in usa 
 SELECT TOP 20 Sum(Cast(1 AS BIGINT)) AS [cnt_carus_clean],
               [carus_clean].[brand]  AS [brand]
 FROM   [dbo].[carus_clean] [carus_clean]
@@ -21,7 +21,7 @@ GROUP  BY [carus_clean].[brand]
 ORDER  BY 1 DESC,
           2 ASC
 
---brands canada
+--brands in canada
 SELECT TOP 20 Sum(Cast(1 AS BIGINT)) AS [cnt_carca_clean],
               [carsca_clean].[brand] AS [brand]
 FROM   [dbo].[carsca_clean] [carsca_clean]
@@ -29,34 +29,54 @@ GROUP  BY [carsca_clean].[brand]
 ORDER  BY 1 DESC,
           2 ASC
 
--- state cars
--- price usa
+-- state cars usa for map
+SELECT Sum(Cast(1 AS BIGINT))   AS [cnt_carus_clean],
+       [carus_clean].[province] AS [province]
+FROM   [dbo].[carus_clean] [carus_clean]
+WHERE  ( [carus_clean].[province] IN ( 'AL','AK','AZ','AR','CA','CO','CT','DE','FL',
+'GA','HI','ID','IL','IN','IA','KS', 'KY','LA',
+'ME','MD','MA','MI','MN','MS','MO','MT','NE',
+'NV','NH','NJ','NM','NY', 'NC','ND','OH','OK',
+'OR','PA','RI','SC','SD','TN','TX','UT','VT',
+'VA','WA','WV', 'WI','WY' ) )
+GROUP  BY [carus_clean].[province] 
+
+-- state cars canada for map
+SELECT Sum(Cast(1 AS BIGINT))   AS [cnt_carsca_clean],
+       [carsca_clean].[province] AS [province]
+FROM   [dbo].[carsca_clean] [carsca_clean]
+WHERE  ( [carsca_clean].[province] IN ( 'AB', 'BC', 'MB', 'NB',
+                                        'NL', 'NS', 'ON', 'PE',
+                                        'QC', 'SK', 'YT' ) )
+GROUP  BY [carsca_clean].[province] 
+
+-- USA Car prices timeline
 SELECT Avg([carus_clean].[price]) AS [avg_price],
        [carus_clean].[year]       AS [year]
 FROM   [dbo].[carus_clean] [carus_clean]
 GROUP  BY [carus_clean].[year]
 
--- price canada
+-- CANADA Car prices timeline
 SELECT Avg([carsca_clean].[price]) AS [avg_price],
        [carsca_clean].[year]       AS [year (carsca_clean)]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[year]
 
--- canad price vs body type
+-- canada price vs body type
 SELECT Sum(Cast(1 AS BIGINT))      AS [cnt_carsca_clean],
        Avg([carsca_clean].[price]) AS [avg_price],
        [carsca_clean].[body_type]  AS [body_type]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[body_type]
 
--- usa price vs body
+-- usa price vs body type
 SELECT Sum(Cast(1 AS BIGINT))     AS [cnt_carus_clean],
        Avg([carus_clean].[price]) AS [avg_price],
        [carus_clean].[body_type]  AS [body_type]
 FROM   [dbo].[carus_clean] [carus_clean]
 GROUP  BY [carus_clean].[body_type]
 
--- Ford USA
+-- Ford USA average price and count by model(dual chart)
 SELECT Sum(Cast(1 AS BIGINT))     AS [cnt_carus_clean],
        Avg([carus_clean].[price]) AS [avg_price],
        [carus_clean].[brand]      AS [brand],
@@ -66,7 +86,7 @@ WHERE  ( [carus_clean].[brand] = 'Ford' )
 GROUP  BY [carus_clean].[brand],
           [carus_clean].[model]
 
--- Ford CA
+-- Ford CANADA average price and count by model(dual chart)
 SELECT Sum(Cast(1 AS BIGINT))      AS [cnt_carsca_clean],
        Avg([carsca_clean].[price]) AS [avg_price (carsca_clean)],
        [carsca_clean].[brand]      AS [brand (carsca_clean)],
@@ -76,7 +96,7 @@ WHERE  ( [carsca_clean].[brand] = 'Ford' )
 GROUP  BY [carsca_clean].[brand],
           [carsca_clean].[model]
 
--- windsor avg price
+-- windsor avg price(Analysis)
 SELECT Sum(Cast(1 AS BIGINT))      AS [cnt_carsca_clean],
        Avg([carsca_clean].[price]) AS [avg_price (carsca_clean)],
        [carsca_clean].[brand]      AS [brand (carsca_clean)],
@@ -86,7 +106,7 @@ WHERE  ( [carsca_clean].[city] = 'Windsor' )
 GROUP  BY [carsca_clean].[brand],
           [carsca_clean].[city]
 
--- windsor brands
+-- windsor brands(Analysis)
 SELECT Sum(Cast(1 AS BIGINT))    AS [cnt_carsca_clean],
        [carsca_clean].[province] AS [province (carsca_clean)]
 FROM   [dbo].[carsca_clean] [carsca_clean]
@@ -99,8 +119,8 @@ SELECT TOP 32 [carsca_clean].[province] AS [province (carsca_clean)]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[province]
 
--- Windsor search
-SELECT Avg([carsca_clean].[price]) AS [avg:price (carsca_clean):ok],
+-- Windsor search (Query structure for brand,model,trim and average price)
+SELECT Avg([carsca_clean].[price]) AS [avg:price (carsca_clean)],
        [carsca_clean].[brand]      AS [brand (carsca_clean)],
        [carsca_clean].[model]      AS [model (carsca_clean)],
        [carsca_clean].[trim]       AS [trim (carsca_clean)]
@@ -116,7 +136,7 @@ SELECT [carsca_clean].[year] AS [year (carsca_clean)]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[year]
 
--- Us search
+-- Us search - Query for tabular data - brand,model and average price
 SELECT [carus_clean].[brand] AS [brand]
 FROM   [dbo].[carus_clean] [carus_clean]
 GROUP  BY [carus_clean].[brand]
@@ -134,7 +154,7 @@ FROM   [dbo].[carus_clean] [carus_clean]
 GROUP  BY [carus_clean].[city]
 ORDER  BY 1 ASC
 
--- canada search
+-- canada search - Query for tabular data - brand,model and average price
 SELECT [carsca_clean].[brand] AS [brand]
 FROM   [dbo].[carsca_clean] [carsca_clean]
 GROUP  BY [carsca_clean].[brand]
@@ -181,7 +201,7 @@ UNION
 SELECT province
 FROM   [dbo].[carsca_clean]
 
--- unique salers canada
+-- Top 20 sellers in canada
 SELECT TOP 20 Sum(Cast(1 AS BIGINT))       AS [cnt_carsca_clean],
               [carsca_clean].[seller_name] AS [seller_name (carsca_clean)]
 FROM   [dbo].[carsca_clean] [carsca_clean]
@@ -189,7 +209,7 @@ GROUP  BY [carsca_clean].[seller_name]
 ORDER  BY 1 DESC,
           2 ASC
 
--- unique salers us
+-- Top 20 sellers in  us
 SELECT TOP 20 Sum(Cast(1 AS BIGINT))      AS [cnt_carus_clean],
               [carus_clean].[seller_name] AS [seller_name]
 FROM   [dbo].[carus_clean] [carus_clean]
