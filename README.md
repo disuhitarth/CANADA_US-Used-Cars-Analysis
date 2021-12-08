@@ -12,7 +12,13 @@ We also want to analyze and compare the current market of the United States and 
 
 ## Installation Instruction
 
-Download this repo and run Create table and charts SQL script to analyze the data.
+Download this repo and run Used_Car_Dataset_Insert_Create_Query.sql script un MSSL Management Studio to creaate table and insert data.
+
+Rename table to CA to carsca_clean and table USA to carus_clean.
+
+run ChartsSQLQuery.sql to analyze the chart query data.
+
+To visualize dashboard and Charts please Click on tableau public link.
 
 
 ## DATASET​ SOURCE
