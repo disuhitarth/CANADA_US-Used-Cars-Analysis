@@ -25,7 +25,7 @@ To visualize dashboard and Charts please Click on tableau public link.
 
 Scan the QR
 
-![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) 
+![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) ![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle%20icon.PNG) 
 
 or click the link
 [Kaggle original data source link](https://www.kaggle.com/rupeshraundal/marketcheck-automotive-data-us-canada)
