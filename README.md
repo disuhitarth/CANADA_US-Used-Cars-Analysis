@@ -16,7 +16,9 @@ Download this repo and run Create table and charts SQL script to analyze the dat
 
 
 ## DATASET​ SOURCE
+
 Scan the QR
+
 ![Repo link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/kaggle.PNG) 
 
 or click the link
