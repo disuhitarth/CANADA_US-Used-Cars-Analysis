@@ -1,0 +1,83 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(tidyverse)
+library(sqldf)
+library(here)
+library(dplyr)
+```
+
+
+
+```{r}
+
+U <- read_csv(('carus_clean.csv'))
+```
+
+
+
+```{r}
+glimpse(U)
+```
+
+
+```{r}
+set.seed(1234)
+```
+
+
+```{r}
+US<- U[sample(1:nrow(U), 50000), ]
+
+```
+
+```{r}
+glimpse(US)
+```
+
+
+
+```{r}
+
+write.csv(US,"/Users/saharsh/downloads/sql data/US.csv", row.names = TRUE)
+
+```
+
+
+
+```{r}
+C <- read_csv(('carsca_clean.csv'))
+```
+
+```{r}
+glimpse(C)
+```
+
+
+```{r}
+sum(is.na(CA))
+```
+
+
+```{r}
+CA<- C[sample(1:nrow(C), 50000), ]
+```
+
+
+```{r}
+glimpse(CA)
+```
+
+
+
+```{r}
+write.csv(CA,"/Users/saharsh/downloads/sql data/CA.csv", row.names = TRUE)
+```
+
