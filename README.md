@@ -42,7 +42,7 @@ The dataset has the aggregate data from various used car dealers across Canada a
 ## Tableau DASHBOARD​
 scan the QR
 
-![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau.PNG) ![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau%20icon.PNG) 
+![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau.PNG)![Dashboard link](https://github.com/disuhitarth/CANADA_US-Used-Cars-Analysis/blob/main/images/tableau%20icon.PNG) 
 
 or click the link 
 [Tableau Dashboard link](https://public.tableau.com/views/USEDCARS-CA-USA/Dashboard3?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
